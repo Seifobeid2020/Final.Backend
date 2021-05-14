@@ -1,0 +1,210 @@
+{
+  "Routes": [
+    //Dashboard Controller Handler
+    {
+      "DownstreamPathTemplate": "/api/Dashboard/{catchAll}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Dashboard/{catchAll}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ExpenseTypes/{catchAll}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Dashboard/{catchAll}/{id}",
+      "UpstreamHttpMethod": [ "Get", "POST", "PUT" ]
+    },
+    //Report and Advance Report Controller Handler
+    //Get('report') ,
+    {
+      "DownstreamPathTemplate": "/api/Report",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Report",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //Get ('advanceReport')
+    {
+      "DownstreamPathTemplate": "/api/report/advanceReport",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/advanceReport",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    //ExpenseTypes Controller Handler
+    //Get , POST
+    {
+      "DownstreamPathTemplate": "/api/expensetypes",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/ExpenseTypes",
+      "UpstreamHttpMethod": [ "Get", "POST" ]
+    },
+    // put(id) , Delete(id)
+    {
+      "DownstreamPathTemplate": "/api/expensetypes/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/ExpenseTypes/{id}",
+      "UpstreamHttpMethod": [ "Delete", "put" ]
+    },
+
+    //Treatment Types Controller Handler
+    //Get , POST
+    {
+      "DownstreamPathTemplate": "/api/TreatmentTypes",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/TreatmentTypes",
+      "UpstreamHttpMethod": [ "Get", "POST" ]
+    },
+    // put(id) , Delete(id)
+    {
+      "DownstreamPathTemplate": "/api/TreatmentTypes/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/TreatmentTypes/{id}",
+      "UpstreamHttpMethod": [ "Delete", "put" ]
+    },
+    //Patient Controller Handler
+    //Get , POST
+    {
+      "DownstreamPathTemplate": "/api/Patients",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Patients",
+      "UpstreamHttpMethod": [ "Get", "POST" ]
+    },
+    //Get(id) , put(id) , Delete(id)
+    {
+      "DownstreamPathTemplate": "/api/Patients/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Patients/{id}",
+      "UpstreamHttpMethod": [ "Delete", "get", "put" ]
+    },
+
+    //Expenses Controller Handler
+    //Get , POST
+    {
+      "DownstreamPathTemplate": "/api/Expenses",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Expenses",
+      "UpstreamHttpMethod": [ "Get", "POST" ]
+    },
+    // put(id) , Delete(id)
+    {
+      "DownstreamPathTemplate": "/api/Expenses/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/Expenses/{id}",
+      "UpstreamHttpMethod": [ "Delete", "put" ]
+    },
+    // Treatment or Patient Details  Controller Handler
+    //Get , POST
+    {
+      "DownstreamPathTemplate": "/api/treatments",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/treatments",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    //Get(id) , put(id) , Delete(id)
+    {
+      "DownstreamPathTemplate": "/api/treatments/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/treatments/{id}",
+      "UpstreamHttpMethod": [ "Delete", "get", "put" ]
+    },
+    //Get by Patient id (id)
+    {
+      "DownstreamPathTemplate": "/api/treatments/patient/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/treatments/patient/{id}",
+      "UpstreamHttpMethod": [ "get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5021"
+  }
+}
